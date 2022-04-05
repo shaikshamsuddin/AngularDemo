@@ -1,0 +1,34 @@
+<div class="container">
+
+  <div>
+    <div class="tab-content">
+
+      <div class="progress-bars-column">
+        <div class="progress-bar-div" *ngFor='let value of progress'>
+          <span class="progress-name" (click)="isShowFields()">
+            {{value.title}}
+          </span>
+          <div class="progress-status">
+            <span>
+              {{value.percentage}}%
+            </span>
+          </div>
+          <mat-progress-bar class="progress-bar" mode="determinate" value={{value.percentage}}></mat-progress-bar>
+        </div>
+
+      </div>
+      <div *ngIf="isShow">
+
+        <div class="button-div">
+          <button mat-raised-button type="submit" color="primary">Submit</button>
+          <button mat-raised-button color="secondary" (click)="close()">Close</button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
