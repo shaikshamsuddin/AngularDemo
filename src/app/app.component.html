@@ -87,7 +87,7 @@ left: 0px;
   font-weight: 600;
 }
 .Application-sector-heading{
- padding: 10px 0;
+ /* padding: 10px 0; */
  border-top: 1px solid rgb(203, 203, 203);
  border-bottom: 1px solid rgb(203, 203, 203);
  font-size: 14px;
@@ -95,10 +95,16 @@ left: 0px;
  font-weight: 600;
  color: white;
  text-align: center;
+ display: flex;
+ height: 50px;
+ justify-content: space-between;
+ align-items: center;
+ 
 }
 .header-icon-style{
 
   font-size: 13px;
+  line-height: 22px;
 }
 .section-header{
   color: rgb(197, 200, 203);
@@ -123,6 +129,10 @@ left: 0px;
 display: flex;
 justify-content: flex-end;
 }
+.toolbar-content span{
+  font-size: 13px;
+  font-weight: 500;
+}
 .menu-content{
   position: absolute;
   top: 50px;
@@ -144,17 +154,17 @@ justify-content: flex-end;
           Investment yeild Basket
         </span>
         </div>
-        <div class="section-header" routerLink="/TabsComponent">
+        <div class="section-header">
           Interface
         </div>
-        <div class="side-nav-buttons">
+        <div class="side-nav-buttons"  routerLink="/TabsComponent">
           <mat-icon class="nav-icons">settings</mat-icon>
           <span
              >
             Data Contributors
          </span>
         </div>
-        <div class="side-nav-buttons">
+        <div class="side-nav-buttons" routerLink="/baskets">
           <mat-icon class="nav-icons">settings</mat-icon>
           <span>
             Baskets
@@ -165,7 +175,7 @@ justify-content: flex-end;
         <div class="toolbar-styles">
           <mat-toolbar class="toolbar-content">
             <div>
-              <span>My Application</span>
+              <span>Leena</span>
 
 
             </div>

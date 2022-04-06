@@ -22,6 +22,13 @@ export class TabsComponentComponent implements OnInit {
     { title: "NYLIM13", percentage: "75" },
     { title: "NYLIM14", percentage: "80 " }
   ];
+  public agencyYields: Array<any> = [
+    {year : '10'},
+    {year : '15'},
+    {year : '30'},
+    {year : '35'},
+    {year : '40'}
+  ];
   constructor() { }
 
      public cancel(){

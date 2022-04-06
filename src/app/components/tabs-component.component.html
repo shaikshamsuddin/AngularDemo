@@ -1,33 +1,110 @@
 <div class="container">
 
   <div>
+    <div class="section-header">
+      Investment Yield Basket
+    </div>
     <div class="tab-content">
 
-      <div class="progress-bars-column">
-        <div class="progress-bar-div" *ngFor='let value of progress'>
-          <span class="progress-name" (click)="isShowFields()">
-            {{value.title}}
-          </span>
-          <div class="progress-status">
-            <span>
-              {{value.percentage}}%
+        <div class="cards-div">
+          <mat-card class="mat-card-style">
+            <mat-card-content class="mat-card-content-style">
+              <div class="card-container">
+                <div class="left-block-card">
+                  <div class="card-heading-1">Data Contributors</div>
+                  <div class="progress-block">
+                    <span class="value-progress-top">
+                      50%
+                    </span>
+                    <mat-progress-bar class="progress-bar-main" mode="determinate" value="50"></mat-progress-bar>
+
+
+                  </div>
+                </div>
+                <mat-icon class="card-icon-style">file_copy</mat-icon>
+
+              </div>
+
+            </mat-card-content>
+          </mat-card>
+          <mat-card class="mat-card-style-2">
+            <mat-card-content class="mat-card-content-style">
+              <div class="card-container">
+                <div class="left-block-card">
+                  <div class="card-heading-2">Basket Status</div>
+                  <div class="progress-block">
+                    <span class="value-progress-top">
+                      Pending </span>
+
+
+                  </div>
+                </div>
+                <mat-icon class="card-icon-style"> chat_bubble_outline</mat-icon>
+
+              </div>
+
+            </mat-card-content>
+          </mat-card>
+        </div>
+        </div>
+        <div class="bottom-section-block">
+            <div>
+          <mat-card class="sectional-heading">
+              Data Contributions
+            </mat-card>
+          <mat-card class="mat-card-section-style">
+
+          <mat-card-content class="mat-card-content-section-style">
+        <div class="progress-bars-column">
+          
+          <div class="progress-bar-div" *ngFor='let value of progress'>
+            <div class="progress-bar-heading-block">
+
+            <span class="progress-name" (click)="isShowFields()">
+              {{value.title}}
             </span>
+              <span class="progress-status">
+                {{value.percentage}}%
+              </span>
+            </div>
+            <mat-progress-bar class="progress-bar" mode="determinate" value={{value.percentage}}></mat-progress-bar>
           </div>
-          <mat-progress-bar class="progress-bar" mode="determinate" value={{value.percentage}}></mat-progress-bar>
-        </div>
-
-      </div>
-      <div *ngIf="isShow">
-
-        <div class="button-div">
-          <button mat-raised-button type="submit" color="primary">Submit</button>
-          <button mat-raised-button color="secondary" (click)="close()">Close</button>
 
         </div>
+        </mat-card-content>
+        </mat-card>
+        </div>
+        <div *ngIf="!isShow">
+          <div>
+            <mat-card class="sectional-heading">
+              Agency Yields
+              </mat-card>
+            <mat-card class="mat-card-section-style">
+  
+            <mat-card-content class="mat-card-content-section-style">
+              <div class="agency-container">
+                <div class="agency-block"  *ngFor="let yields of agencyYields">
+                <div class="agency-input">
+                  <span>
+                    {{yields.year}} Year
+                  </span>
+
+                </div>
+              </div>
+              </div>
+    
+          </mat-card-content>
+          </mat-card>
+          </div>
+          <div class="button-div">
+            <button mat-raised-button type="submit" color="primary">Submit</button>
+            <button mat-raised-button color="secondary" (click)="close()">Close</button>
+
+          </div>
+</div>
 
       </div>
-
-    </div>
+      
   </div>
 
 

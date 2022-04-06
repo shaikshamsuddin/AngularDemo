@@ -20,6 +20,8 @@ import { BasketsComponent } from './basketsComponet/baskets.component';
 
 const routes: Routes = [
   { path: 'TabsComponent', component: TabsComponentComponent },
+  { path: 'baskets', component: BasketsComponent },
+
 ];
 
 @NgModule({
